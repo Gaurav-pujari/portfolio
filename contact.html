@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • Gaurav</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
+</head>
+
+<body data-page="contact">
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand"> Portfolio</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <!-- <a href="clients.html">Clients</a> -->
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" data-theme-toggle>Light</button>
+        <!-- <a class="btn" href="admin.html">Admin</a> -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid" style="grid-template-columns:1fr 1fr">
+      <section class="card pad">
+        <div class="section-title">Contact</div>
+        <div class="section-sub">Reach out for opportunities</div>
+
+        <div class="hr"></div>
+
+        <div class="item">
+          <div class="item-title">Contact Details</div>
+          <div class="item-desc">
+            <div>Email: <b id="contactEmail">-</b></div>
+            <div style="margin-top:6px">Phone: <b id="contactPhone">-</b></div>
+
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn primary" id="contactLinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn" id="contactGitHub" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card pad">
+        <div class="section-title">Quick Message</div>
+        <div class="section-sub">Email me directly</div>
+
+        <div class="hr"></div>
+
+        <div class="item">
+          <div class="notice">
+            Click below to open your email app with my email pre-filled.
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="btn primary" id="contactMailBtn">Send Email</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">© <span id="yr"></span> Gaurav Portfolio</div>
+  </main>
+
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

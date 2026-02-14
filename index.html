@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+
+<body data-page="dashboard">
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Portfolio</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <!-- <a href="clients.html">Clients</a> -->
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" data-theme-toggle>Light</button>
+        <!-- <a class="btn" href="admin.html">Admin</a> -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+ 
+    <div class="grid kpis">
+      <div class="card pad">
+        <div class="kpi-title">Projects Completed</div>
+        <div class="kpi-value" id="kpi1">0</div>
+        
+      </div>
+      <div class="card pad">
+        <div class="kpi-title">Ongoing Projects</div>
+        <div class="kpi-value" id="kpi2">0</div>
+   
+      </div>
+      <div class="card pad">
+        <div class="kpi-title">Dashboards Built</div>
+        <div class="kpi-value" id="kpi3">0</div>
+    
+      </div>
+      <div class="card pad">
+        <div class="kpi-title">Hours Delivered</div>
+        <div class="kpi-value" id="kpi4">0</div>
+
+      </div>
+    </div>
+
+    <div class="row-hero">
+      <section class="card pad">
+        <div class="hero">
+          <div class="avatar">
+            <img id="photo" alt="Profile" />
+            <div class="glow"></div>
+          </div>
+          <div>
+            <div class="big-name" id="name">-</div>
+            <div style="color:var(--muted); margin-top:4px; font-weight:700" id="role"></div>
+            <div style="color:var(--muted); font-size:12px; margin-top:6px" id="location"></div>
+
+            <div class="mini-row">
+              <span id="miniLocation">Pune</span>
+              <span id="miniEmail"></span>
+              <span id="miniPhone"></span>
+            </div>
+
+            <div class="headline" id="headline"></div>
+
+            <div class="summary">
+              <div style="font-weight:900; margin-bottom:8px">Professional Summary</div>
+              <p id="summaryText">-</p>
+              <div class="highlights" id="highlights"></div>
+            </div>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn primary" id="lnkLinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn" id="lnkGitHub" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" id="lnkEmail">Email</a>
+            </div>
+
+            <div class="badges" id="toolsBadges"></div>
+          </div>
+        </div>
+      </section>
+
+   
+      <aside class="card pad">
+        <div class="section-title">Project Distribution by Industry</div>
+
+        <div style="margin-top:12px">
+          <canvas id="donut" height="400"></canvas>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Experience + Clients -->
+    <div class="grid" style="grid-template-columns:1fr 1fr; margin-top:14px">
+      <section class="card pad">
+        <div class="section-title">Professional Experience</div>
+        <div class="section-sub">Resume-based experience</div>
+        <div class="list" id="expList"></div>
+      </section>
+
+      <section class="card pad">
+        <div class="section-title">Featured Clients</div>
+       
+        <div class="list" id="clientMini"></div>
+      </section>
+    </div>
+
+    <!-- ✅ Skills Section (NEW) -->
+    <div class="grid" style="grid-template-columns:1fr 1fr; margin-top:14px">
+      <!-- Technical Skills -->
+      <section class="card pad">
+        <div class="section-title">Technical Skills</div>
+   
+
+        <div class="skills-wrap" id="techSkillsWrap"></div>
+      </section>
+
+      <!-- Soft Skills -->
+      <section class="card pad">
+        <div class="section-title">Soft Skills</div>
+  
+
+        <div class="skills-wrap" id="softSkillsWrap"></div>
+      </section>
+    </div>
+
+    <!-- Certifications + Education -->
+    <div class="grid" style="grid-template-columns:1fr 1fr; margin-top:14px">
+      <section class="card pad">
+        <div class="section-title">Certifications</div>
+       
+        <div class="list" id="certList"></div>
+      </section>
+
+      <section class="card pad">
+        <div class="section-title">Education</div>
+       
+        <div class="list" id="eduList"></div>
+      </section>
+    </div>
+
+    <!-- Projects -->
+    <section class="card pad" style="margin-top:14px">
+      <div class="section-title">Perosnal Projects</div>
+    
+      <div class="list" id="projectMini"></div>
+    </section>
+
+    <div class="footer">© <span id="yr"></span> Gaurav Portfolio</div>
+  </main>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

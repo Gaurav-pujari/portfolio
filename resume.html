@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume • Gaurav</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
+</head>
+
+<body data-page="resume">
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Portfolio</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <!-- <a href="clients.html">Clients</a> -->
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" data-theme-toggle>Light</button>
+        <!-- <a class="btn" href="admin.html">Admin</a> -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card pad">
+      <div class="section-title">Resume</div>
+      <div class="section-sub">Download my latest resume</div>
+
+      <div class="hr"></div>
+
+      <div class="item">
+        <div class="item-title" id="resumeName">Resume.pdf</div>
+        <div class="item-meta">Updated: <span id="resumeUpdated">-</span></div>
+
+        <div style="margin-top:12px">
+          <a class="btn primary" id="resumeLink" target="_blank" rel="noreferrer">Open Resume</a>
+        </div>
+
+        <div class="notice" style="margin-top:12px">
+          <!-- Tip: Keep a copy of <b>Resume.pdf</b> in the same folder as this website. -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="yr"></span> Gaurav Portfolio</div>
+  </main>
+
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -611,3 +611,41 @@ canvas{
   transform: translateY(-2px);
   transition: 0.2s ease;
 }
+/* ===========================
+   ✅ MOBILE FIXES
+=========================== */
+@media (max-width: 768px){
+
+  /* Make all 2-column grids become 1-column */
+  .grid[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Navbar links wrap nicely */
+  .nav-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links{
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-actions{
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /* Buttons should not overflow */
+  .btn{
+    max-width: 100%;
+  }
+
+  /* Contact page: prevent the right card cutting */
+  .card{
+    overflow: hidden;
+  }
+
+}

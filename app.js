@@ -120,7 +120,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
     {
       id: "c6",
       name: "Daffoworth Pharmaceutical Pvt Ltd",
-      logo: "./Daffowowth.jpg",
+      logo: "./Daffoworth.jpg",
 
     },
   ],
@@ -736,5 +736,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page === "resume") renderResumePage();
   if (page === "contact") renderContactPage();
 });
+
 
 

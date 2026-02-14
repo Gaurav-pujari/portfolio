@@ -91,37 +91,37 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       id: "c1",
       name: "Noise",
       logo: "./Noise Logo.jpg",
-      toolsUsed: ["Power BI", "SQL", "Excel"],
+   
     },
     {
       id: "c2",
       name: "Living Liquidz",
       logo: "./Living Liquidz.png",
-      toolsUsed: ["Power BI", "DAX", "Excel"],
+ 
     },
     {
       id: "c3",
       name: "Inflection Point Ventures (IPV)",
       logo: "./ipventures.jpg",
-      toolsUsed: ["Power BI", "SQL", "Python"],
+   
     },
     {
       id: "c4",
       name: "GSN Groups",
       logo: "./gsn groups.png",
-      toolsUsed: ["Power BI", "SQL"],
+
     },
     {
       id: "c5",
       name: "Coolfi",
       logo: "./coolfi.png",
-      toolsUsed: ["Power BI", "Excel"],
+  
     },
     {
       id: "c6",
       name: "Daffoworth Pharmaceutical Pvt Ltd",
       logo: "./daffowowth.jpg",
-      toolsUsed: ["Power BI", "SQL"],
+
     },
   ],
 

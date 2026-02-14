@@ -736,3 +736,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page === "resume") renderResumePage();
   if (page === "contact") renderContactPage();
 });
+

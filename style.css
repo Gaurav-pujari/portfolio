@@ -1,0 +1,797 @@
+/* =========================================================
+   ✅ PORTFOLIO STYLE.CSS (FULL FINAL)
+   - Premium Dark + Premium Light
+   - Light theme = White + 3D cards (NO BLUE tint)
+   - Skills / Tools / Soft skills pills fixed
+   - Client logos support
+   - Projects: slider + github link + bullets + arrows
+========================================================= */
+
+/* ---------- Base Theme Variables ---------- */
+:root{
+  --bg:#0b0f19;
+  --panel:#121a2a;
+  --soft:#0f1524;
+
+  --text:#e9eefc;
+  --muted:#aeb7d4;
+
+  --border:rgba(255,255,255,.10);
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+
+  --primary:#4f7cff;
+  --primary2:#6fe7dd;
+
+  --radius:18px;
+
+  --card: rgba(255,255,255,.04);
+}
+
+/* ---------- Light Theme (Premium White + 3D) ---------- */
+[data-theme="light"]{
+  --bg:#f4f6fb;
+  --panel:#ffffff;
+  --soft:#ffffff;
+
+  --text:#0f172a;
+  --muted:#475569;
+
+  --border:rgba(15,23,42,.10);
+
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+
+  --primary:#2f5bff;
+  --primary2:#0ea5e9;
+
+  --card:#ffffff;
+}
+
+/* ---------- Reset ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+
+  background:
+    radial-gradient(900px 500px at 15% 0%, rgba(79,124,255,.12), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(111,231,221,.10), transparent 55%),
+    var(--bg);
+
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+
+  color:var(--text);
+}
+
+a{color:inherit; text-decoration:none}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:18px;
+}
+
+/* =========================================================
+   ✅ NAVBAR
+========================================================= */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 14, 24, .55);
+  border-bottom:1px solid var(--border);
+}
+
+[data-theme="light"] .navbar{
+  background: rgba(255,255,255,.70);
+}
+
+.nav-inner{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 18px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:.2px;
+  font-size:16px;
+}
+
+.nav-links{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.nav-links a{
+  padding:8px 10px;
+  border-radius:12px;
+  color:var(--muted);
+  border:1px solid transparent;
+  font-weight:700;
+}
+
+.nav-links a.active{
+  color:var(--text);
+  background: rgba(79,124,255,.14);
+  border-color: rgba(79,124,255,.25);
+}
+
+[data-theme="light"] .nav-links a.active{
+  background: rgba(47,91,255,.10);
+  border-color: rgba(47,91,255,.20);
+}
+
+.nav-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* =========================================================
+   ✅ BUTTONS
+========================================================= */
+.btn{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color:var(--text);
+  padding:9px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:800;
+}
+
+.btn:hover{filter:brightness(1.08)}
+
+.btn.primary{
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+  border-color: transparent;
+  color:#07101c;
+}
+
+[data-theme="light"] .btn.primary{
+  color:#ffffff;
+}
+
+.btn.ghost{
+  background: transparent;
+}
+
+/* =========================================================
+   ✅ LAYOUT
+========================================================= */
+.grid{
+  display:grid;
+  gap:14px;
+}
+
+.grid.kpis{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1024px){
+  .grid.kpis{grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+
+@media (max-width: 520px){
+  .grid.kpis{grid-template-columns: 1fr;}
+}
+
+.row-hero{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:14px;
+  margin-top:14px;
+}
+
+@media (max-width: 1024px){
+  .row-hero{grid-template-columns: 1fr;}
+}
+
+/* =========================================================
+   ✅ CARDS (Main Containers)
+========================================================= */
+.card{
+  background: rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+[data-theme="light"] .card{
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+}
+
+.card.pad{padding:18px;}
+
+.section-title{
+  font-weight:950;
+  font-size:18px;
+}
+
+.section-sub{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:4px;
+}
+
+/* =========================================================
+   ✅ KPI CARDS
+========================================================= */
+.kpi-title{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:900;
+}
+
+.kpi-value{
+  font-size:34px;
+  font-weight:950;
+  margin-top:6px;
+}
+
+.kpi-sub{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:6px;
+}
+
+/* =========================================================
+   ✅ HERO SECTION
+========================================================= */
+.hero{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:18px;
+  align-items:center;
+}
+
+@media (max-width: 720px){
+  .hero{
+    grid-template-columns: 1fr;
+    text-align:center;
+  }
+}
+
+.avatar{
+  width:180px;
+  height:180px;
+  border-radius: 28px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin:0 auto;
+  position:relative;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.glow{
+  position:absolute;
+  inset:-30px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(79,124,255,.40), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(111,231,221,.35), transparent 55%);
+  filter: blur(18px);
+  z-index:-1;
+}
+
+.big-name{
+  font-size:36px;
+  font-weight:950;
+  letter-spacing:-.3px;
+}
+
+.headline{
+  color:var(--muted);
+  margin-top:8px;
+  line-height:1.55;
+}
+
+/* =========================================================
+   ✅ MINI INFO ROW
+========================================================= */
+.mini-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.mini-row span{
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  font-weight:700;
+}
+
+[data-theme="light"] .mini-row span{
+  background: #ffffff;
+  box-shadow: 0 10px 18px rgba(15,23,42,0.06);
+}
+
+/* =========================================================
+   ✅ SUMMARY BOX
+========================================================= */
+.summary{
+  margin-top:14px;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+}
+
+[data-theme="light"] .summary{
+  background:#ffffff;
+  box-shadow: 0 14px 30px rgba(15,23,42,0.07);
+}
+
+.summary p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.75;
+  font-size:14px;
+}
+
+/* =========================================================
+   ✅ BADGES
+========================================================= */
+.badges{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.badge{
+  font-size:12px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color:var(--text);
+  font-weight:800;
+}
+
+[data-theme="light"] .badge{
+  background:#ffffff;
+  color:#0f172a;
+  border:1px solid rgba(15,23,42,0.10);
+  box-shadow:
+    0 10px 20px rgba(15,23,42,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.85);
+}
+
+/* =========================================================
+   ✅ LIST ITEMS
+========================================================= */
+.list{
+  display:grid;
+  gap:12px;
+  margin-top:14px;
+}
+
+.item{
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+}
+
+[data-theme="light"] .item{
+  background:#ffffff;
+  box-shadow: 0 14px 30px rgba(15,23,42,0.07);
+}
+
+.item-title{
+  font-weight:950;
+  font-size:15px;
+}
+
+.item-meta{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+  font-weight:700;
+}
+
+.item-desc{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:10px;
+  line-height:1.7;
+}
+
+/* ===========================
+   DESC UL (Project bullets)
+=========================== */
+.desc-ul{
+  margin:0;
+  padding-left:18px;
+  line-height:1.8;
+}
+
+.desc-ul li{
+  margin-bottom:6px;
+}
+
+/* =========================================================
+   ✅ CLIENT LOGO SUPPORT
+========================================================= */
+.client-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.client-logo{
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  object-fit:cover;
+  border:1px solid var(--border);
+  flex-shrink:0;
+}
+
+[data-theme="light"] .client-logo{
+  border:1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+}
+
+/* =========================================================
+   ✅ SKILLS SECTION
+========================================================= */
+.skills-wrap{
+  display:grid;
+  gap:14px;
+  margin-top:14px;
+}
+
+.skill-group{
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+}
+
+[data-theme="light"] .skill-group{
+  background:#ffffff;
+  box-shadow: 0 14px 30px rgba(15,23,42,0.07);
+  border:1px solid rgba(15,23,42,0.10);
+}
+
+.skill-title{
+  font-weight:950;
+  margin-bottom:10px;
+  font-size:14px;
+  color:var(--text);
+}
+
+[data-theme="light"] .skill-title{
+  color:#0f172a;
+}
+
+/* =========================================================
+   ✅ DONUT CHART FIX
+========================================================= */
+canvas{
+  max-width:100%;
+}
+
+/* =========================================================
+   ✅ FOOTER
+========================================================= */
+.footer{
+  margin-top:24px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:12px;
+  padding:18px;
+  text-align:center;
+}
+
+/* =========================================================
+   ✅ PROJECT IMAGE SLIDER (PREMIUM + ARROWS)
+========================================================= */
+.proj-slider{
+  width:100%;
+  height:240px;
+  position:relative;
+  border-radius:16px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  background: rgba(255,255,255,.03);
+}
+
+/* Scrollable track */
+.proj-track{
+  height:100%;
+  display:flex;
+  gap:12px;
+  padding:12px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+
+.proj-track::-webkit-scrollbar{
+  height:0px;
+}
+
+/* Slide */
+.proj-slide{
+  flex:0 0 auto;
+  width:360px;
+  height:100%;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.02);
+}
+
+.proj-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* =========================================================
+   ✅ ARROW BUTTONS
+========================================================= */
+.proj-btn{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index:10;
+
+  width:44px;
+  height:44px;
+  border-radius:999px;
+
+  border:1px solid var(--border);
+  background: rgba(10, 14, 24, 0.55);
+  backdrop-filter: blur(10px);
+
+  color: var(--text);
+  font-size:20px;
+  font-weight:900;
+
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition: 0.2s ease;
+}
+
+.proj-btn:hover{
+  filter:brightness(1.15);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.proj-btn.left{
+  left:12px;
+}
+
+.proj-btn.right{
+  right:12px;
+}
+
+/* Light mode arrows */
+[data-theme="light"] .proj-btn{
+  background: rgba(255,255,255,0.75);
+  color:#0f172a;
+}
+
+/* =========================================================
+   ✅ SLIDER GRADIENT SHADOW (Premium effect)
+========================================================= */
+.proj-slider::before,
+.proj-slider::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:70px;
+  height:100%;
+  z-index:5;
+  pointer-events:none;
+}
+
+.proj-slider::before{
+  left:0;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), transparent);
+}
+
+.proj-slider::after{
+  right:0;
+  background: linear-gradient(to left, rgba(0,0,0,0.35), transparent);
+}
+
+[data-theme="light"] .proj-slider::before{
+  background: linear-gradient(to right, rgba(15,23,42,0.12), transparent);
+}
+
+[data-theme="light"] .proj-slider::after{
+  background: linear-gradient(to left, rgba(15,23,42,0.12), transparent);
+}
+
+/* =========================================================
+   ✅ GitHub link
+========================================================= */
+.proj-github{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  margin-top:12px;
+  font-weight:900;
+  color: var(--primary2);
+}
+
+.proj-github:hover{
+  text-decoration: underline;
+}
+
+.muted{
+  color:var(--muted);
+  font-weight:800;
+}
+
+/* =========================================================
+   ✅ MOBILE SLIDER
+========================================================= */
+@media(max-width:520px){
+  .proj-slider{height:190px;}
+  .proj-slide{width:280px;}
+
+  .proj-btn{
+    width:38px;
+    height:38px;
+    font-size:18px;
+  }
+
+  .proj-slider::before,
+  .proj-slider::after{
+    width:55px;
+  }
+}
+/* ================================
+   ✅ FIX: Slider going outside container
+================================ */
+
+/* Main item should not allow overflow */
+.item{
+  overflow: hidden;
+}
+
+/* Slider should never exceed container width */
+.proj-slider{
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Track should respect parent width */
+.proj-track{
+  min-width: 0;
+}
+
+/* Slides should not force overflow on small widths */
+.proj-slide{
+  max-width: 100%;
+}
+
+/* Mobile fix: full width slides */
+@media(max-width:720px){
+  .proj-slide{
+    width: 90%;
+  }
+}
+
+@media(max-width:520px){
+  .proj-slide{
+    width: 92%;
+  }
+}
+/* ==========================================
+   ✅ MOBILE NAVBAR FIX (Clean + Scroll Links)
+========================================== */
+@media (max-width: 720px) {
+
+  .nav-inner{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  /* Top row: Brand + Theme Button */
+  .brand{
+    font-size: 16px;
+  }
+
+  .nav-actions{
+    justify-content: flex-end;
+  }
+
+  /* Links row */
+  .nav-links{
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar{
+    height: 0px;
+  }
+
+  .nav-links a{
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+/* ==========================================
+   ✅ MOBILE GRID FIX (2 column → 1 column)
+========================================== */
+@media (max-width: 900px){
+
+  /* Jo grids inline style me 1fr 1fr hai unko bhi force karo */
+  .grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hero already handled, but safe */
+  .row-hero{
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================
+   RESUME 2-IMAGE PREVIEW
+========================== */
+.resume-preview-grid{
+  margin-top:12px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+}
+
+.resume-preview-img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+  display:block;
+}
+
+/* Mobile */
+@media(max-width:720px){
+  .resume-preview-grid{
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume • Gaurav</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
+</head>
+
+<body data-page="resume">
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Portfolio</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" data-theme-toggle>Light</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card pad">
+      <div class="section-title">Resume</div>
+      <br>
+      <!-- <div class="section-sub">Preview + download my latest resume</div> -->
+
+      <div class="hr"></div>
+
+      <!-- ✅ Preview -->
+      <div class="item">
+        <div class="item-title">Resume Preview</div>
+
+        <!-- ✅ 2 Images Side by Side -->
+        <div class="resume-preview-grid">
+          <img id="resumeImg1" class="resume-preview-img" alt="Resume Preview 1" />
+          <img id="resumeImg2" class="resume-preview-img" alt="Resume Preview 2" />
+        </div>
+      </div>
+
+      <!-- ✅ Download / Open -->
+      <div class="item" style="margin-top:14px">
+        <div class="item-title" id="resumeName">Resume.pdf</div>
+        <div class="item-meta">Updated: <span id="resumeUpdated">-</span></div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <!-- <a class="btn primary" id="resumeLink" target="_blank" rel="noreferrer">Open Resume</a> -->
+          <a class="btn" id="resumeDownload" download>Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="yr"></span> Gaurav Portfolio</div>
+  </main>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

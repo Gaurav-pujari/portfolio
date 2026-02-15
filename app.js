@@ -119,7 +119,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       ],
       stack: ["Power BI", "DAX", "Excel"],
       images: ["./marketing 1.png", "./marketing2.png", "./marketing3.png"],
-      github: "https://github.com/Gaurav-pujari",
+      github: "https://github.com/Gaurav-pujari/Marketing-Analytics-Report",
     },
 
     {
@@ -132,7 +132,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       ],
       stack: ["Power BI", "DAX", "Excel"],
       images: ["./Pharma1.png", "./Pharma2.png", "./Pharma3.png", "./Pharma4.png"],
-      github: "https://github.com/Gaurav-pujari",
+      github: "https://github.com/Gaurav-pujari/Pharma-Analytics-Insights-Dashboard",
     },
 
     {
@@ -145,7 +145,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       ],
       stack: ["Tableau", "Excel"],
       images: ["./UT MART.png"],
-      github: "https://github.com/Gaurav-pujari",
+      github: "https://github.com/Gaurav-pujari/UT-Mart-Sales-Analytics-Dashboard",
     },
 
     {
@@ -158,7 +158,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       ],
       stack: ["Tableau", "Excel"],
       images: ["./Superstore1.png", "./superstore2.png", "./superstore3.png"],
-      github: "https://github.com/Gaurav-pujari",
+      github: "https://github.com/Gaurav-pujari/Superstore-Business-Performance-Dashboard",
     },
   ],
 

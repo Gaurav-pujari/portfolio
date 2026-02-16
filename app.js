@@ -104,7 +104,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
     { id: "c3", name: "Inflection Point Venture (IPV)", logo: "./ipventures.jpg"},
     { id: "c4", name: "GSN Groups", logo: "./gsn groups.png" },
     { id: "c5", name: "Coolfi", logo: "./coolfi.png" },
-    { id: "c6", name: "Daffoworth Pharmaceutical Pvt Ltd", logo: "./daffoworth.jpg" },
+    { id: "c6", name: "Daffoworth Pharmaceutical Pvt Ltd", logo: "./Daffoworth.jpg" },
   ],
 
   projects: [
@@ -696,3 +696,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initProjectSliders();
 });
+

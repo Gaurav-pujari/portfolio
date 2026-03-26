@@ -17,12 +17,10 @@ const DEFAULT_DATA = {
   profile: {
     name: "Gaurav Ravindra Pujari",
 
-    summaryText: `Data Science and Analytics Professional with 1+ year of experience 
-delivering 10+ end-to-end analytics and machine learning projects across Retail, FMCG, Pharmaceutical,
-Venture Capital, and Marketing domains. Strong expertise in SQL, data cleaning, exploratory data analysis (EDA),
-dashboard development, KPI reporting, and business intelligence solutions using Power BI and Tableau. 
-Proven ability to translate complex datasets into actionable business insights, automate reporting workflows, 
-and support data-driven decision-making for cross-functional stakeholders.`,
+    summaryText: `Data Science and Analytics Professional with 1+ year of experience delivering data-driven solutions in a SaaS environment.
+Skilled in SQL, PL/SQL, Excel, and dashboard development, with hands-on experience across the analytics
+lifecycle including stakeholder requirement gathering, data cleaning, validation, and KPI reporting. Proven ability to
+transform complex datasets into actionable insights and automate reporting workflows to support business decisionmaking.`,
 
     email: "gauravpujari2002@gmail.com",
     phone: "+91 8483959447",
@@ -49,23 +47,48 @@ and support data-driven decision-making for cross-functional stakeholders.`,
   },
 
   experience: [
+ {
+      id: "exp0",
+      company: "Aurochs Solutions",
+      title: "Business Analytics Associate",
+      location: "Pune, India",
+      start: "03/2026",
+      end: "Present",
+      points: [
+"Currently working on two client projects in a SaaS environment, supporting end-to-end analytics and business solution delivery.",
+"Perform data cleaning and preprocessing to ensure data accuracy, consistency, and readiness for analysis and reporting.",
+"Collaborate with clients through the complete project lifecycle, from requirement gathering and understanding business needs to final sign-off.",
+"Develop and maintain interactive dashboards and analytical reports to support data-driven decision-making.",
+"Provide regular project updates and status communication to both internal teams and external stakeholders, ensuring alignment and timely delivery."
+      ],
+      toolsUsed: [
+        "SQL",
+        "Python",
+        "Excel",
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+      ],
+    },
+
+
+
     {
       id: "exp1",
       company: "Fire AI",
-      title: "Associate Data Science & Analytics",
+      title: "Associate Data Science",
       location: "Mumbai, India",
       start: "03/2025",
       end: "10/2025",
       points: [
-        "Delivered 10+ end-to-end analytics and reporting projects across Retail, FMCG, Pharma, Marketing, and Venture Capital",
-        "Data cleaning, transformation, and validation using SQL and Excel to improve accuracy",
-        "Built interactive dashboards in Power BI and Tableau for KPI tracking and performance monitoring",
-        "Automated recurring MIS reports to reduce manual effort and turnaround time",
-        "Performed EDA to identify trends, anomalies, and performance gaps",
+"Led and successfully completed 10+ analytics and reporting projects across Pharma, Venture Capital, FMCG, Retail, and Marketing & Advertising sectors, delivering business-driven insights.",
+"Worked within a SaaS-based environment, contributing to data and reporting solutions delivered through a software as- a-service product model aligned with client business requirements.",
+"Managed end-to-end stakeholder engagement including requirement gathering, daily client communication, and regular project status updates with both internal and external stakeholders.",
+"Performed data preparation activities including data cleaning, structuring, and exploratory analysis to ensure highquality, analysis-ready datasets aligned with project objectives.",
+"Collaborated with stakeholders to finalize dashboard design, KPIs, and visualization layouts before developing interactive dashboards to support performance monitoring and decision-making.",
+"Conducted data validation by cross-verifying outputs with source systems, ensured accuracy of deliverables, and facilitated final client reviews and sign-off upon successful project completion."
       ],
       toolsUsed: [
-        "Power BI",
-        "Tableau",
         "SQL",
         "Python",
         "Excel",
@@ -82,10 +105,10 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       start: "10/2024",
       end: "03/2025",
       points: [
-        "Built ML + analytics solutions: preprocessing, feature engineering, evaluation",
-        "Improved model performance by 15–20% via tuning and feature optimization",
-        "Demand forecasting + inventory optimization reducing excess inventory by ~18%",
-        "Implemented monitoring and automated retraining workflows",
+"Developed machine learning models including churn risk prediction and time-series forecasting models to predict future sales trends and demand patterns for business planning.",
+"Built forecasting-driven solutions supporting inventory optimization, helping reduce overstocking and improving replenishment decision-making.",
+"Performed end-to-end data analysis including data preparation, exploratory analysis, feature engineering, and model evaluation to generate actionable business insights.",
+"Contributed to analytics dashboard development by translating model outputs and analytical findings into visual reports for stakeholder monitoring and decision support."
       ],
       toolsUsed: [
         "Python",

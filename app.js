@@ -104,7 +104,7 @@ and support data-driven decision-making for cross-functional stakeholders.`,
     { id: "c3", name: "Inflection Point Venture (IPV)", logo: "./ipventures.jpg"},
     { id: "c4", name: "GSN Groups", logo: "./gsn groups.png" },
     { id: "c5", name: "Coolfi", logo: "./coolfi.png" },
-    { id: "c6", name: "Daffoworth Pharmaceutical Pvt Ltd", logo: "./Daffoworth.jpg" },
+    { id: "c6", name: "Daffoworth Pharmaceutical Pvt Ltd", logo: "./daffoworth.jpg" },
   ],
 
   projects: [
@@ -122,18 +122,18 @@ and support data-driven decision-making for cross-functional stakeholders.`,
       github: "https://github.com/Gaurav-pujari/Marketing-Analytics-Report",
     },
 
-    {
-      id: "p2",
-      title: "Pharma Analytics Insights Dashboard",
-      desc: [
-        "Designed star-schema data model and performed full data cleansing",
-        "Built MoM, DRR, ROMI, and Collection Efficiency metrics using DAX",
-        "Delivered state-level and product-level performance dashboards",
-      ],
-      stack: ["Power BI", "DAX", "Excel"],
-      images: ["./Pharma1.png", "./Pharma2.png", "./Pharma3.png", "./Pharma4.png"],
-      github: "https://github.com/Gaurav-pujari/Pharma-Analytics-Insights-Dashboard",
-    },
+    // {
+    //   id: "p2",
+    //   title: "Pharma Analytics Insights Dashboard",
+    //   desc: [
+    //     "Designed star-schema data model and performed full data cleansing",
+    //     "Built MoM, DRR, ROMI, and Collection Efficiency metrics using DAX",
+    //     "Delivered state-level and product-level performance dashboards",
+    //   ],
+    //   stack: ["Power BI", "DAX", "Excel"],
+    //   images: ["./Pharma1.png", "./Pharma2.png", "./Pharma3.png", "./Pharma4.png"],
+    //   github: "https://github.com/Gaurav-pujari/Pharma-Analytics-Insights-Dashboard",
+    // },
 
     {
       id: "p3",
@@ -594,8 +594,8 @@ function renderResumePage() {
   if (el("resumeName")) el("resumeName").textContent = r.fileName || "Resume.pdf";
   if (el("resumeUpdated")) el("resumeUpdated").textContent = r.updatedOn || "-";
 
-  if (el("resumeLink")) el("resumeLink").href = r.fileUrl || "./Resume.pdf";
-  if (el("resumeDownload")) el("resumeDownload").href = r.fileUrl || "./Resume.pdf";
+  if (el("resumeLink")) el("resumeLink").href = r.fileUrl || "./assets/Resume.pdf";
+  if (el("resumeDownload")) el("resumeDownload").href = r.fileUrl ||"./assets/Resume.pdf" ;
 
   // ✅ Preview 1
   if (el("resumeImg1")) {
@@ -696,4 +696,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initProjectSliders();
 });
-
